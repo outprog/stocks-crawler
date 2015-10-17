@@ -30,6 +30,7 @@ class StockHisCrawler
             rescue => ex
                 puts ex.message
                 puts '等待10s后重试'
+                sleep 10
                 retry
             end
 
