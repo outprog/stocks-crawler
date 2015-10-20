@@ -4,7 +4,7 @@
 
 ## 安装依赖和运行
 
-Nokogiri
+[Nokogiri](https://github.com/sparklemotion/nokogiri)
 
     gem install nokogiri
 
@@ -18,4 +18,7 @@ Nokogiri
 
 名单保存路径为 ./data 目录（目录可自行设置），上证名单保存为 ss 文件， 深证名单保存为 sz 文件。
 
-获取名单后，从 yahoo 抓取个股历史纪录。纪录保存路径为 ./data/sto 目录，上证个股保存文件名是 "股票代码.ss"，深证个股保存文件名是 "股票代码.sz"。
+获取名单后，从 yahoo 抓取个股历史记录。保存路径为 ./data/sto 目录。
+
+* 上证个股保存文件名是 "股票代码.ss"
+* 深证个股保存文件名是 "股票代码.sz"

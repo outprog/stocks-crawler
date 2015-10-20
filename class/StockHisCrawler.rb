@@ -29,8 +29,8 @@ class StockHisCrawler
                 sto_his = Net::HTTP.get(uri)
             rescue => ex
                 puts ex.message
-                puts '等待10s后重试'
-                sleep 10
+                puts '等待1s后重试'
+                sleep 1
                 retry
             end
 
