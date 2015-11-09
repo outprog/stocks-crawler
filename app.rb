@@ -31,7 +31,7 @@ rescue Erron::ENOENT
   Dir.mkdir(DATA_PATH)
   retry
 end
-stockHis = StockHisCrawler.new( "#{DATA_PATH}/index", "#{DATA_PATH}/index-out", YEAR, MONTH, DAY)
+stockHis = StockHisCrawler.new( "#{DATA_PATH}/index", "#{DATA_PATH}/stos", YEAR, MONTH, DAY)
 stockHis.save
 puts "done"
 puts "-----------------------"
