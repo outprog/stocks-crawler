@@ -27,7 +27,7 @@ begin
   io.puts(config['index-ss'])
   io.puts(config['index-sz'])
   io.close
-rescue Erron::ENOENT
+rescue Errno::ENOENT
   Dir.mkdir(DATA_PATH)
   retry
 end
