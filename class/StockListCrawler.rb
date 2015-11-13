@@ -10,9 +10,16 @@ class StockListCrawler
     Url = 'http://quote.eastmoney.com/stock_list.html'
 
     def initialize(path='.')
-        ## 该网页编码不为 utf-8
-        html = open( Url).read.force_encoding("GBK")
-        @doc = Nokogiri::HTML(html)
+        begin
+          ## 该网页编码不为 utf-8
+          html = open( Url).read.force_encoding("GBK")
+          @doc = Nokogiri::HTML(html)
+        rescue => ex
+          puts ex.message
+          puts "等待十秒后重试"
+          sleep 10
+          retry
+        end
         @path = path
     end
 
